@@ -40,4 +40,9 @@ public class AttributeServiceImpl implements AttributeService {
         attributeDao.updateAttribute(attribute);
     }
 
+    @Override
+    public void deleteAttributeById(Integer id) {
+        attributeDao.deleteAttributeById(id);
+    }
+
 }

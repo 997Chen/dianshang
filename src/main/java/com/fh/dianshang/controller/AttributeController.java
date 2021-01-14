@@ -47,7 +47,7 @@ public class AttributeController {
        attributeService.addAttribute(attribute);
         return ResultData.success("");
     }
-    /*2    新增属性数据
+    /*3    新增属性数据
     路径   http://192.168.1.100:8080/api/attribute/updateAttribute
     post请求
      参数  attribute对象
@@ -58,6 +58,19 @@ public class AttributeController {
             return ResultData.error(500,"参数错误");
         }
         attributeService.updateAttribute(attribute);
+        return ResultData.success("");
+    }
+    /*4    假删除属性数据
+路径   http://192.168.1.100:8080/api/attribute/deleteAttributeById
+post请求
+ 参数  id  必传
+返回值   {"code":200,"message":"提示",data:""}*/
+    @PostMapping("deleteAttributeById")
+    public ResultData deleteAttributeById(Integer id){
+        if (id==null){
+            return ResultData.error(500,"参数错误");
+        }
+        attributeService.deleteAttributeById(id);
         return ResultData.success("");
     }
 

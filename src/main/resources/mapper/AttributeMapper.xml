@@ -18,4 +18,7 @@
         update shop_shuxing set name=#{name},nameCH=#{nameCH},typeId=#{typeId},type=#{type},isSKU=#{isSKU},
         isDel=#{isDel},updateDate=SYSDATE(),author='陈大龙' where id=#{id}
     </update>
+    <update id="deleteAttributeById" parameterType="java.lang.Integer">
+        update shop_shuxing set isDel=1 where id=#{id}
+    </update>
 </mapper>

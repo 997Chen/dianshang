@@ -17,4 +17,6 @@ public interface AttributeDao {
     void addAttribute(Attribute attribute);
 
     void updateAttribute(Attribute attribute);
+
+    void deleteAttributeById(Integer id);
 }

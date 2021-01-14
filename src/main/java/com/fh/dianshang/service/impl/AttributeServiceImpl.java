@@ -34,4 +34,10 @@ public class AttributeServiceImpl implements AttributeService {
     public void addAttribute(Attribute attribute) {
         attributeDao.addAttribute(attribute);
     }
+
+    @Override
+    public void updateAttribute(Attribute attribute) {
+        attributeDao.updateAttribute(attribute);
+    }
+
 }

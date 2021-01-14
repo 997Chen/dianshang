@@ -14,4 +14,8 @@
      insert  into shop_shuxing (name,nameCH,typeId,type,isSKU,isDel,createDate,updateDate,author) value
      (#{name},#{nameCH},#{typeId},#{type},#{isSKU},0,SYSDATE(),SYSDATE(),'陈大龙')
     </insert>
+    <update id="updateAttribute" parameterType="com.fh.dianshang.entity.po.Attribute">
+        update shop_shuxing set name=#{name},nameCH=#{nameCH},typeId=#{typeId},type=#{type},isSKU=#{isSKU},
+        isDel=#{isDel},updateDate=SYSDATE(),author='陈大龙' where id=#{id}
+    </update>
 </mapper>

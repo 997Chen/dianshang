@@ -13,4 +13,6 @@ public interface AttributeService {
     Map queryAttributeData(PinPaiData pinPaiData);
 
     void addAttribute(Attribute attribute);
+
+    void updateAttribute(Attribute attribute);
 }

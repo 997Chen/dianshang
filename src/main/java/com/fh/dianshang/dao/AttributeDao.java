@@ -15,4 +15,6 @@ public interface AttributeDao {
     List<Attribute> queryAttributeData(PinPaiData pinPaiData);
 
     void addAttribute(Attribute attribute);
+
+    void updateAttribute(Attribute attribute);
 }

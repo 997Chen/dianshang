@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.fh.dianshang.dao.AttributeDao">
+    <select id="queryDataCount" parameterType="com.fh.dianshang.entity.vo.PinPaiData" resultType="java.lang.Integer">
+    select count(*) from shop_shuxing;
+    </select>
+    <select id="queryAttributeData" resultType="com.fh.dianshang.entity.po.Attribute"  parameterType="com.fh.dianshang.entity.vo.PinPaiData">
+        select * from  shop_shuxing limit ${size*(start-1)},#{size}
+    </select>
+    <insert id="addAttribute" parameterType="com.fh.dianshang.entity.po.Attribute">
+     insert  into shop_shuxing (name,nameCH,typeId,type,isSKU,isDel,createDate,updateDate,author) value
+     (#{name},#{nameCH},#{typeId},#{type},#{isSKU},0,SYSDATE(),SYSDATE(),'陈大龙')
+    </insert>
+</mapper>

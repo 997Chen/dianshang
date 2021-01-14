@@ -20,6 +20,7 @@ public class PpController {
     @Resource
     private PpService ppService;
 
+
         @GetMapping("queryData")
     public ResultData queryData(PinPaiData pinPaiData){
         if (pinPaiData.getStart()==null){

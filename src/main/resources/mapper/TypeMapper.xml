@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.fh.dianshang.dao.TypeDao">
+<select id="getData" resultType="com.fh.dianshang.entity.po.Type">
+    select * from shop_spType
+</select>
+    <select id="getDataByPid" resultType="com.fh.dianshang.entity.po.Type" parameterType="java.lang.Integer">
+         select * from shop_spType where pid=#{pid}
+    </select>
+    <insert id="add" parameterType="com.fh.dianshang.entity.po.Type" useGeneratedKeys="true"
+    keyColumn="id"
+    keyProperty="id">
+        insert into shop_spType (pid,name,isDel,createDate) value (#{pid},#{name},0,SYSDATE());
+    </insert>
+    <update id="update" parameterType="com.fh.dianshang.entity.po.Type">
+        update shop_spType set name=#{name},pid=#{pid},isDel=#{isDel},updateDate=SYSDATE() where id=#{id}
+    </update>
+    <select id="toUpdate" parameterType="java.lang.Integer" resultType="com.fh.dianshang.entity.po.Type">
+        select * from shop_spType where id=#{id}
+    </select>
+</mapper>

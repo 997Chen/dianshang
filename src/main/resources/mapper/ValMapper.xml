@@ -16,5 +16,7 @@
     <delete id="delValById" parameterType="java.lang.Integer">
         delete from shop_value where id=#{id}
     </delete>
-
+    <update id="updateVal" parameterType="com.fh.dianshang.entity.po.Val">
+        update shop_value set vname=#{vname},vnameCH=#{vnameCH} where id=#{id}
+    </update>
 </mapper>

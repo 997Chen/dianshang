@@ -39,6 +39,10 @@ public class ValServiceImpl implements ValService {
         valDao.delValById(id);
     }
 
+    @Override
+    public void updateVal(Val val) {
+        valDao.updateVal(val);
+    }
 
 
 }

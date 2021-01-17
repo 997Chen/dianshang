@@ -17,4 +17,6 @@ public interface ValDao {
     void addVal(Val val);
 
     void delValById(Integer id);
+
+    void updateVal(Val val);
 }

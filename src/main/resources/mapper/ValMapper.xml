@@ -11,11 +11,14 @@
         select * from shop_value where attrId=#{id}  limit ${size*(start-1)},#{size}
     </select>
     <insert id="addVal" parameterType="com.fh.dianshang.entity.po.Val">
-        insert into shop_value (vname,vnameCH,attrId) value (#{vname},#{vnameCH},#{attrId})
+        insert into shop_value (vname,vnameCH,attrId,isDel) value (#{vname},#{vnameCH},#{attrId},0)
     </insert>
-    <delete id="delValById" parameterType="java.lang.Integer">
+   <!-- <delete id="delValById" parameterType="java.lang.Integer">
         delete from shop_value where id=#{id}
-    </delete>
+    </delete>-->
+    <update id="delValById" parameterType="java.lang.Integer">
+        update shop_value set isDel=1 where id=#{id}
+    </update>
     <update id="updateVal" parameterType="com.fh.dianshang.entity.po.Val">
         update shop_value set vname=#{vname},vnameCH=#{vnameCH} where id=#{id}
     </update>

@@ -4,6 +4,7 @@ import com.fh.dianshang.entity.po.Val;
 import com.fh.dianshang.entity.vo.PinPaiData;
 import com.fh.dianshang.entity.vo.ResultData;
 import com.fh.dianshang.service.ValService;
+import org.springframework.data.relational.core.sql.In;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -31,6 +32,16 @@ public class ValController {
     @PostMapping("addVal")
     public ResultData addVal(Val val){
       valService.addVal(val);
+        return ResultData.success("");
+    }
+    @PostMapping("delValById")
+    public ResultData delValById(Integer id){
+        valService.delValById(id);
+        return ResultData.success("");
+    }
+    @PostMapping("updateVal")
+    public ResultData updateVal(Val val){
+        valService.updateVal(val);
         return ResultData.success("");
     }
 

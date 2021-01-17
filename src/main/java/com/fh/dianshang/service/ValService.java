@@ -14,4 +14,8 @@ public interface ValService {
     Map queryvalDataById(PinPaiData pinPaiData);
 
     void addVal(Val val);
+
+    void delValById(Integer id);
+
+    void updateVal(Val val);
 }

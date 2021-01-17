@@ -33,4 +33,12 @@ public class ValServiceImpl implements ValService {
     public void addVal(Val val) {
         valDao.addVal(val);
     }
+
+    @Override
+    public void delValById(Integer id) {
+        valDao.delValById(id);
+    }
+
+
+
 }

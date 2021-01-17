@@ -13,5 +13,8 @@
     <insert id="addVal" parameterType="com.fh.dianshang.entity.po.Val">
         insert into shop_value (vname,vnameCH,attrId) value (#{vname},#{vnameCH},#{attrId})
     </insert>
+    <delete id="delValById" parameterType="java.lang.Integer">
+        delete from shop_value where id=#{id}
+    </delete>
 
 </mapper>

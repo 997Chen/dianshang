@@ -29,4 +29,8 @@ public class ValServiceImpl implements ValService {
         map.put("data",valList);
         return map;
     }
+    @Override
+    public void addVal(Val val) {
+        valDao.addVal(val);
+    }
 }

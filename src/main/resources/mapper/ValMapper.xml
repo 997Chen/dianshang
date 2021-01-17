@@ -10,4 +10,8 @@
     <select id="queryvalDataByIdData" parameterType="com.fh.dianshang.entity.vo.PinPaiData" resultType="com.fh.dianshang.entity.po.Val">
         select * from shop_value where attrId=#{id}  limit ${size*(start-1)},#{size}
     </select>
+    <insert id="addVal" parameterType="com.fh.dianshang.entity.po.Val">
+        insert into shop_value (vname,vnameCH,attrId) value (#{vname},#{vnameCH},#{attrId})
+    </insert>
+
 </mapper>

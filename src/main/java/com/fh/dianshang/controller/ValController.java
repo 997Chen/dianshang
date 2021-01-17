@@ -28,5 +28,10 @@ public class ValController {
         Map map=  valService.queryvalDataById(pinPaiData);
         return ResultData.success(map);
     }
+    @PostMapping("addVal")
+    public ResultData addVal(Val val){
+      valService.addVal(val);
+        return ResultData.success("");
+    }
 
 }

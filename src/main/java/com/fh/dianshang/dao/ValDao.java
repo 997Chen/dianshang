@@ -13,4 +13,6 @@ public interface ValDao {
     Integer queryvalDataByIdCount(PinPaiData pinPaiData);
 
     List<Val> queryvalDataByIdData(PinPaiData pinPaiData);
+
+    void addVal(Val val);
 }

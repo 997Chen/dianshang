@@ -5,6 +5,7 @@ package com.fh.dianshang.entity.vo;
  * @create 2021-01-13 18:42
  */
 public class PinPaiData {
+    private Integer id;
     private Integer start;
 
     private Integer size;
@@ -33,5 +34,13 @@ public class PinPaiData {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 }

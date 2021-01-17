@@ -5,13 +5,13 @@
 
 <mapper namespace="com.fh.dianshang.dao.PpDao">
 <select id="queryDataCount" resultType="java.lang.Integer" parameterType="com.fh.dianshang.entity.vo.PinPaiData">
-    select count(*) from shop_paizi where 1=1
+    select count(*) from shop_paizi where 1=1 and isDel=0
     <if test='name != null and name != &quot;&quot;'>
       and name like concat('%',#{name},'%')
       </if>
 </select>
     <select id="queryListDataByParams" resultType="com.fh.dianshang.entity.po.PinPai" parameterType="com.fh.dianshang.entity.vo.PinPaiData">
-    select * from shop_paizi where 1=1
+    select * from shop_paizi where 1=1 and isDel=0
         <if test='name != null and name != &quot;&quot;'>
             and name like concat('%',#{name},'%')
         </if>

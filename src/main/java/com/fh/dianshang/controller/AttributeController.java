@@ -42,7 +42,7 @@ public class AttributeController {
         post请求
          参数  attribute对象
         返回值   {"code":200,"message":"提示",data:""}*/
-    @PostMapping("addAttribute")
+        @PostMapping("addAttribute")
     public ResultData addAttribute(Attribute attribute){
        attributeService.addAttribute(attribute);
         return ResultData.success("");
@@ -73,8 +73,4 @@ post请求
         attributeService.deleteAttributeById(id);
         return ResultData.success("");
     }
-
-
-
-
 }

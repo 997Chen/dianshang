@@ -4,10 +4,14 @@ import com.fh.dianshang.entity.po.PinPai;
 import com.fh.dianshang.entity.vo.PinPaiData;
 import com.fh.dianshang.entity.vo.ResultData;
 import com.fh.dianshang.service.PpService;
+import com.fh.dianshang.utils.OssFileUtils;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
+import java.io.IOException;
 import java.util.Map;
+import java.util.UUID;
 
 /**
  * @author cyl
@@ -19,8 +23,16 @@ import java.util.Map;
 public class PpController {
     @Resource
     private PpService ppService;
-
-
+    @RequestMapping("uploadFile")
+    public ResultData uploadFile(MultipartFile file) throws IOException {
+        //处理新名称
+        String originalFilename = file.getOriginalFilename();
+        //防止中文引起的错误
+        String newName= UUID.randomUUID().toString()+originalFilename.substring(originalFilename.lastIndexOf("."));
+        //存储路径
+        newName="imgs/"+newName;
+        return ResultData.success(OssFileUtils.uploadFile(file.getInputStream(),newName));
+    }
         @GetMapping("queryData")
     public ResultData queryData(PinPaiData pinPaiData){
         if (pinPaiData.getStart()==null){

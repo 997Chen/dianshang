@@ -48,7 +48,7 @@ public class ValController {
         post请求
          参数   id
         返回值   {"code":200,"message":"提示",data:""}*/
-    @PostMapping("delValById")
+    @DeleteMapping("delValById")
     public ResultData delValById(Integer id){
         valService.delValById(id);
         return ResultData.success("");

@@ -21,7 +21,7 @@ public class TypeConroller {
     @Resource
     public TypeService typeService;
 /*1    查询所有的分类数据
-    路径   http://ip:port/api/type/getData
+    路径   http://192.168.1.107:8080/api/type/getData
     get请求
             参数
     返回值   {"code":200,"message":"提示",data:[{*}]}*/
@@ -31,7 +31,7 @@ public class TypeConroller {
     return ResultData.success(typeList);
 }
 /*2    查询指定pid的数据
-    路径   http://ip:port/api/type/getDataByPid
+    路径   http://192.168.1.107:8080/api/type/getDataByPid
     get请求
     参数    Pid
     返回值   {"code":200,"message":"提示",data:[{*}]}*/
@@ -45,7 +45,7 @@ public ResultData getDataByPid(Integer pid){
 }
 
 /*3  新增分类
-    路径   http://ip:port/api/type/add
+    路径   http://192.168.1.107:8080/api/type/add
     post请求
     参数    pid    name
     返回值    {code:"",message:"",data:新增的id}*/
@@ -67,7 +67,7 @@ public ResultData add(Type type){
     }
 
  /*4   修改
-    路径  http://ip:port/api/type/update
+    路径  http://192.168.1.107:8080/api/type/update
     post请求
     参数   id （必传）     pid   name  isDel
     返回值     {code:"",message:""}*/

@@ -22,7 +22,7 @@ public class AttributeController {
     @Resource
     private AttributeService attributeService;
     /*1    查询所有的属性数据
-        路径   http://192.168.1.100:8080/api/attribute/queryAttributeData
+        路径   http://192.168.1.107:8080/api/attribute/queryAttributeData
         get请求
          参数  size  start  两个参数必传
         返回值   {"code":200,"message":"提示",data:[{*}]}*/
@@ -38,7 +38,7 @@ public class AttributeController {
         return ResultData.success(map);
     }
     /*2    新增属性数据
-        路径   http://192.168.1.100:8080/api/attribute/addAttribute
+        路径   http://192.168.1.107:8080/api/attribute/addAttribute
         post请求
          参数  attribute对象
         返回值   {"code":200,"message":"提示",data:""}*/
@@ -48,7 +48,7 @@ public class AttributeController {
         return ResultData.success("");
     }
     /*3    新增属性数据
-    路径   http://192.168.1.100:8080/api/attribute/updateAttribute
+    路径   http://192.168.1.107:8080/api/attribute/updateAttribute
     post请求
      参数  attribute对象
     返回值   {"code":200,"message":"提示",data:""}*/
@@ -61,7 +61,7 @@ public class AttributeController {
         return ResultData.success("");
     }
     /*4    假删除属性数据
-路径   http://192.168.1.100:8080/api/attribute/deleteAttributeById
+路径   http://192.168.1.107:8080/api/attribute/deleteAttributeById
 post请求
  参数  id  必传
 返回值   {"code":200,"message":"提示",data:""}*/

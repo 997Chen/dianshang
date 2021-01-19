@@ -21,4 +21,6 @@ public interface PpDao {
 
 
     void updatePp(PinPai pinPai);
+
+    List<PinPai> queryPinpaiData();
 }

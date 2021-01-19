@@ -19,4 +19,6 @@ public interface AttributeDao {
     void updateAttribute(Attribute attribute);
 
     void deleteAttributeById(Integer id);
+
+    List<Attribute> queryDataByTypeId(Integer typeId);
 }

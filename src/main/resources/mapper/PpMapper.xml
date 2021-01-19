@@ -26,4 +26,7 @@ insert into shop_paizi (name,bandE,imgpath,bandDesc,ord,isdel,createDate,author)
     <update id="updatePp" parameterType="com.fh.dianshang.entity.po.PinPai">
         update shop_paizi set name=#{name},bandE=#{bandE},imgpath=#{imgpath},bandDesc=#{bandDesc},ord=#{ord},isdel=#{isdel},updateDate=#{updateDate},author=#{author} where id=#{id}
     </update>
+    <select id="queryPinpaiData" resultType="com.fh.dianshang.entity.po.PinPai">
+          select * from shop_paizi
+    </select>
 </mapper>

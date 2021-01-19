@@ -19,4 +19,6 @@ public interface ValDao {
     void delValById(Integer id);
 
     void updateVal(Val val);
+
+    List<Val> getvalDataById(Integer attrId);
 }

@@ -5,8 +5,9 @@
 
 <mapper namespace="com.fh.dianshang.dao.SpDao">
 <insert id="addSp" parameterType="com.fh.dianshang.entity.po.ShangPin">
-    insert into shop_sp (name,title,pzId,productdecs,price,stocks,sortNum,createDate,updateDate,author,isDel) value (
-    #{name},#{title},#{pzId},#{productdecs},#{price},#{stocks},#{sortNum},SYSDATE(),SYSDATE(),'陈大龙',0
+    insert into shop_sp (name,title,pzId,imgPath,typeId,productdecs,price,stocks,sortNum,createDate,updateDate,author,isDel) value (
+    #{name},#{title},#{pzId},#{imgPath},#{typeId},#{productdecs},#{price},#{stocks},#{sortNum},SYSDATE(),SYSDATE(),'陈大龙',0
     )
 </insert>
+
 </mapper>

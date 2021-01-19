@@ -3,6 +3,7 @@ package com.fh.dianshang.service;
 import com.fh.dianshang.entity.po.PinPai;
 import com.fh.dianshang.entity.vo.PinPaiData;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -15,5 +16,7 @@ public interface PpService {
     void addPp(PinPai pinPai);
 
     void updatePp(PinPai pinPai);
+
+    List<PinPai> queryPinpaiData();
 }
 

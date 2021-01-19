@@ -22,4 +22,7 @@
     <update id="updateVal" parameterType="com.fh.dianshang.entity.po.Val">
         update shop_value set vname=#{vname},vnameCH=#{vnameCH},updateDate=SYSDATE() where id=#{id}
     </update>
+    <select id="getvalDataById" resultType="com.fh.dianshang.entity.po.Val" parameterType="java.lang.Integer">
+        select * from shop_value where attrId=#{id}
+    </select>
 </mapper>

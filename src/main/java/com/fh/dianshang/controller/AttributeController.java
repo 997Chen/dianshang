@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -21,6 +22,14 @@ public class AttributeController {
 
     @Resource
     private AttributeService attributeService;
+
+    @GetMapping("queryDataByTypeId")
+    public ResultData queryDataByTypeId(Integer typeId){
+        //HashMap<Object, Object> map = new HashMap<>();
+        Map map= attributeService.queryDataByTypeId(typeId);
+
+       return  ResultData.success(map);
+    }
     /*1    查询所有的属性数据
         路径   http://192.168.1.107:8080/api/attribute/queryAttributeData
         get请求

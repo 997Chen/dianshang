@@ -29,6 +29,7 @@ public class ValServiceImpl implements ValService {
         map.put("data",valList);
         return map;
     }
+
     @Override
     public void addVal(Val val) {
         valDao.addVal(val);
@@ -42,6 +43,12 @@ public class ValServiceImpl implements ValService {
     @Override
     public void updateVal(Val val) {
         valDao.updateVal(val);
+    }
+
+    @Override
+    public List<Val> getvalDataById(Integer attrId) {
+
+        return valDao.getvalDataById(attrId);
     }
 
 

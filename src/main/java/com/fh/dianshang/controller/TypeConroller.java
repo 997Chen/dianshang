@@ -30,6 +30,11 @@ public class TypeConroller {
     List<Type> typeList =typeService.getData();
     return ResultData.success(typeList);
 }
+    @GetMapping("queryDataByTypeId")
+    public ResultData queryDataByTypeId(Integer typeId){
+        List<Type> typeList =typeService.getData();
+        return ResultData.success(typeList);
+    }
 /*2    查询指定pid的数据
     路径   http://192.168.1.107:8080/api/type/getDataByPid
     get请求

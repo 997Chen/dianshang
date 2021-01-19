@@ -3,6 +3,7 @@ package com.fh.dianshang.service;
 import com.fh.dianshang.entity.po.Val;
 import com.fh.dianshang.entity.vo.PinPaiData;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -18,4 +19,6 @@ public interface ValService {
     void delValById(Integer id);
 
     void updateVal(Val val);
+
+    List<Val> getvalDataById(Integer attrId);
 }

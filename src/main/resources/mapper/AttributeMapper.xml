@@ -21,4 +21,7 @@
     <update id="deleteAttributeById" parameterType="java.lang.Integer">
         update shop_shuxing set isDel=1 where id=#{id}
     </update>
+    <select id="queryDataByTypeId" parameterType="java.lang.Integer" resultType="com.fh.dianshang.entity.po.Attribute">
+        select * from shop_shuxing where typeId=#{id}
+    </select>
 </mapper>

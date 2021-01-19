@@ -8,6 +8,7 @@ import org.springframework.data.relational.core.sql.In;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -32,6 +33,14 @@ public class ValController {
         }
         Map map=  valService.queryvalDataById(pinPaiData);
         return ResultData.success(map);
+    }
+    @GetMapping("getvalDataById")
+    public ResultData getvalDataById(Integer attrId){
+        if (attrId==null){
+            return ResultData.error(500,"参数错误");
+        }
+        List<Val> valList=  valService.getvalDataById(attrId);
+        return ResultData.success(valList);
     }
     /*2   新增属性值数据
         路径   http://192.168.1.107:8080/api/val/addVal

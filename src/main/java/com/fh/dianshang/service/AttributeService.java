@@ -17,4 +17,6 @@ public interface AttributeService {
     void updateAttribute(Attribute attribute);
 
     void deleteAttributeById(Integer id);
+
+    Map queryDataByTypeId(Integer typeId);
 }

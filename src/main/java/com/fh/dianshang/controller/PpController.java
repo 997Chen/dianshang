@@ -12,6 +12,7 @@ import javax.annotation.Resource;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
@@ -52,6 +53,17 @@ public class PpController {
         }
       Map map=  ppService.queryData(pinPaiData);
         return ResultData.success(map);
+    }
+    /*1    查询所有的品牌数据
+         路径   http://192.168.1.107:8080/api/pinpai/queryData
+         get请求
+          参数  不传参数
+         返回值   {"code":200,"message":"提示",data:[{*}]}*/
+    @GetMapping("queryPinpaiData")
+    public ResultData queryPinpaiData(){
+
+       List<PinPai> pinpais= ppService.queryPinpaiData();
+        return ResultData.success(pinpais);
     }
     /*2    新增的品牌数据
       路径   http://192.168.1.107:8080/api/pinpai/addPp

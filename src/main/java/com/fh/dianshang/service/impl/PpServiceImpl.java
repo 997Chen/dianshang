@@ -38,4 +38,11 @@ public class PpServiceImpl implements PpService {
     public void updatePp(PinPai pinPai) {
         ppDao.updatePp(pinPai);
     }
+
+    @Override
+    public List<PinPai> queryPinpaiData() {
+
+        return  ppDao.queryPinpaiData();
+    }
+
 }

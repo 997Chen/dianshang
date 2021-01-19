@@ -22,7 +22,6 @@ public class SpController {
     @Resource
     public SpService spService;
     /*2    新增属性数据
-     路径   http://192.168.1.107:8080/api/shangpin/addSp
      post请求
       参数  shangPin
      返回值   {"code":200,"message":"提示",data:""}*/

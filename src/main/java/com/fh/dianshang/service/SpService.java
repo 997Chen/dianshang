@@ -1,6 +1,9 @@
 package com.fh.dianshang.service;
 
 import com.fh.dianshang.entity.po.ShangPin;
+import com.fh.dianshang.entity.vo.PinPaiData;
+
+import java.util.Map;
 
 /**
  * @author cyl
@@ -8,4 +11,8 @@ import com.fh.dianshang.entity.po.ShangPin;
  */
 public interface SpService {
     void addSp(ShangPin shangPin);
+
+    Map querySp(PinPaiData pinPaiData);
+
+    void deleteSp(Integer id);
 }

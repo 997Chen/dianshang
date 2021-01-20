@@ -9,5 +9,13 @@
     #{name},#{title},#{pzId},#{imgPath},#{typeId},#{productdecs},#{price},#{stocks},#{sortNum},SYSDATE(),SYSDATE(),'陈大龙',0
     )
 </insert>
-
+<select id="querySpCount" parameterType="com.fh.dianshang.entity.po.ShangPin" resultType="java.lang.Integer">
+    select count(*) from shop_sp
+</select>
+<select id="querySpData" parameterType="com.fh.dianshang.entity.po.ShangPin" resultType="com.fh.dianshang.entity.po.ShangPin">
+    select * from shop_sp limit ${size*(start-1)},#{size}
+</select>
+    <update id="deleteSp" parameterType="java.lang.Integer">
+    update shop_sp set isDel=1 where id=#{id}
+    </update>
 </mapper>

@@ -18,4 +18,6 @@ public interface SpDao {
     List<PinPai> querySpData(PinPaiData pinPaiData);
 
     void deleteSp(Integer id);
+
+    void updateSp(Integer id);
 }

@@ -18,4 +18,8 @@
     <update id="deleteSp" parameterType="java.lang.Integer">
     update shop_sp set isDel=1 where id=#{id}
     </update>
+    <update id="updateSp" parameterType="java.lang.Integer" >
+        update shop_sp set name=#{name},title=#{title},pzId=#{pzId},imgPath=#{imgPath},typeId=#{typeId},productdecs=#{productdecs},price=#{price},stocks=#{stocks},
+         sortNum=#{sortNum},createDate=SYSDATE(),updateDate=SYSDATE(),author='陈大龙'where id=#{id}
+    </update>
 </mapper>

@@ -41,4 +41,9 @@ public class SpServiceImpl implements SpService {
         spDao.deleteSp(id);
 
     }
+
+    @Override
+    public void updateSp(Integer id) {
+        spDao.updateSp(id);
+    }
 }

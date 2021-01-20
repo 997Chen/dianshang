@@ -15,4 +15,6 @@ public interface SpService {
     Map querySp(PinPaiData pinPaiData);
 
     void deleteSp(Integer id);
+
+    void updateSp(Integer id);
 }

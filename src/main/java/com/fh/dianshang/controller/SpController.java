@@ -56,5 +56,18 @@ get请求
          spService.deleteSp(id);
         return ResultData.success("");
     }
+    /*4    修改商品数据
+路径   http://192.168.1.107:8080/api/shangpin/updateSp
+post请求
+参数  id 必传
+返回值   {"code":200,"message":"提示",data:""}*/
+    @PostMapping("updateSp")
+    public ResultData updateSp(Integer id){
+        if (id==null){
+            return ResultData.error(500,"参数错误");
+        }
+        spService.updateSp(id);
+        return ResultData.success("");
+    }
 
 }

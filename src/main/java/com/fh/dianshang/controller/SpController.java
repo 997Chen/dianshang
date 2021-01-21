@@ -15,7 +15,7 @@ import java.util.Map;
  * @create 2021-01-18 18:46
  */
 @RestController
-@RequestMapping("api/shangpin")
+    @RequestMapping("api/shangpin")
 @CrossOrigin
 public class SpController {
     @Resource
@@ -62,12 +62,25 @@ post请求
 参数  id 必传
 返回值   {"code":200,"message":"提示",data:""}*/
     @PostMapping("updateSp")
-    public ResultData updateSp(Integer id){
+    public ResultData updateSp(ShangPin shangPin){
+        if (shangPin.getId()==null){
+            return ResultData.error(500,"参数错误");
+        }
+        spService.updateSp(shangPin);
+        return ResultData.success("");
+    }
+    /*4    根据id回显商品数据
+路径   http://192.168.1.107:8080/api/shangpin/updateSpById
+post请求
+参数  id 必传
+返回值   {"code":200,"message":"提示",data:""}*/
+    @PostMapping("updateSpById")
+    public ResultData updateSpById(Integer id){
         if (id==null){
             return ResultData.error(500,"参数错误");
         }
-        spService.updateSp(id);
-        return ResultData.success("");
+       ShangPin shangpin= spService.updateSpById(id);
+        return ResultData.success(shangpin);
     }
 
 }

@@ -43,7 +43,12 @@ public class SpServiceImpl implements SpService {
     }
 
     @Override
-    public void updateSp(Integer id) {
-        spDao.updateSp(id);
+    public void updateSp(ShangPin shangPin) {
+        spDao.updateSp(shangPin);
+    }
+
+    @Override
+    public ShangPin updateSpById(Integer id) {
+        return spDao.updateSpById(id);
     }
 }

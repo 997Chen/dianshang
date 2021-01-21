@@ -1,5 +1,8 @@
 package com.fh.dianshang.entity.po;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 
 /**
@@ -15,7 +18,13 @@ private Integer    id; //主键
     private Double    price ; //  价格
     private Integer   stocks ; // 库存
     private Integer   sortNum ; // 排许
+    private String  imgPath;
+    private Integer  typeId;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT+8")
     private Date createDate;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT+8")
     private Date   updateDate;
     private String  author;
     private Integer  isDel;  //是否删除
@@ -114,5 +123,21 @@ private Integer    id; //主键
 
     public void setIsDel(Integer isDel) {
         this.isDel = isDel;
+    }
+
+    public String getImgPath() {
+        return imgPath;
+    }
+
+    public void setImgPath(String imgPath) {
+        this.imgPath = imgPath;
+    }
+
+    public Integer getTypeId() {
+        return typeId;
+    }
+
+    public void setTypeId(Integer typeId) {
+        this.typeId = typeId;
     }
 }

@@ -19,5 +19,7 @@ public interface SpDao {
 
     void deleteSp(Integer id);
 
-    void updateSp(Integer id);
+    void updateSp(ShangPin shangPin);
+
+    ShangPin updateSpById(Integer id);
 }
